@@ -1,0 +1,47 @@
+﻿version: '3.8'
+
+services:
+  # PROJECT 2: THE SOVEREIGN CLOUD (Local LLM Engine)
+  ollama-brain:
+    image: ollama/ollama:latest
+    container_name: clinical_brain_offline
+    volumes:
+      - ./ollama_storage:/root/.ollama
+    networks:
+      - sovereign_net
+
+  # PROJECT 3 & 1: THE BRIDGE & LITIGATION SHIELD
+  clinical-logic-api:
+    build: .
+    container_name: litigation_shield_api
+    environment:
+      - LOCAL_LLM_URL=http://ollama-brain:11434
+    networks:
+      - sovereign_net
+
+  # PROJECT 2: SOVEREIGN VAULT (Vector Database)
+  qdrant-vault:
+    image: qdrant/qdrant:latest
+    container_name: clinical_vector_vault
+    ports:
+      - "6333:6333"
+    volumes:
+      - ./qdrant_storage:/qdrant/storage
+    networks:
+      - sovereign_net
+
+  # PROJECT 4: ELDER-GUARD DASHBOARD (Streamlit UI)
+  nurse-station:
+    image: python:3.10-slim
+    container_name: clinician_ui
+    command: streamlit run app.py
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    networks:
+      - sovereign_net
+
+networks:
+  sovereign_net:
+    driver: bridge

@@ -1,0 +1,32 @@
+# ==========================================
+# SOVEREIGN CLINICAL_OS: MASTER DEPENDENCIES
+# ==========================================
+
+# --- PROJECT 1: EDGE VISION (TATALE BRIDGE) ---
+easyocr==1.7.2
+opencv-python-headless<4.11  # 'Headless' is critical for server/tablet deployment
+numpy<2.0.0                  # Pinned to prevent Streamlit/EasyOCR conflicts
+protobuf<5.0.0               # Pinned to prevent Streamlit conflicts
+
+# --- PROJECT 2: SOVEREIGN CLOUD & VAULT ---
+ollama==0.1.6
+fastembed==0.2.0             # The E5-Large Multilingual Brain
+qdrant-client==1.7.3         # The Vector Vault
+
+# --- PROJECT 3: LITIGATION SHIELD ---
+pydantic>=2.6.1              # Governance-as-Code
+fhir.resources==7.1.0        # Global Data Standards
+pytest>=8.0.0                # Clinical Safety Case Auditing
+
+# --- PROJECT 4: AGENTIC SWARM (HITL) ---
+langgraph>=0.2.0             # Upgraded to support SQLite Memory
+langgraph-checkpoint-sqlite>=1.0.0 # Antifragile State Memory
+aiosqlite>=0.22.1            # Asynchronous local database
+langfuse>=3.13.0             # AI Telemetry & Observability
+
+# --- INTEGRATED INFRASTRUCTURE & UI ---
+streamlit==1.31.0            # The Nurse's Station Dashboard
+python-dotenv==1.0.1         # Sovereign Secrets Manager (.env)
+fastapi==0.109.2             # API backend capability
+uvicorn==0.27.1
+pandas==2.3.3

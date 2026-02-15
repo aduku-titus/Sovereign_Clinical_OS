@@ -1,0 +1,22 @@
+# Environments
+venv/
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Project Specific Data (Project 2)
+ollama_storage/
+vault_data/
+qdrant_storage/
+*.db
+
+# Large Model Files
+*.onnx
+*.bin
+*.gguf
+
+# OS files
+.DS_Store
+Thumbs.db
