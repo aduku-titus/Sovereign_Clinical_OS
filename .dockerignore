@@ -1,0 +1,9 @@
+venv/
+.git/
+.env
+ollama_storage/
+vault_data/
+qdrant_storage/
+__pycache__/
+*.pyc
+*.db
