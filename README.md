@@ -16,3 +16,19 @@ This is a unified clinical operating system built to bypass the "Public Cloud De
 ```bash
 docker-compose up -d
 # Navigate to http://localhost:8501
+
+## 🏛️ 12-Nation Regulatory Readiness
+This OS is architected to satisfy the specific legal frameworks of the 2026 migration targets:
+
+| Cluster | Focus | Target Nations | Dossier |
+| :--- | :--- | :--- | :--- |
+| **A: Sovereignty** | Data Residency | UAE, Saudi Arabia, S. Korea | [View Dossier](docs/01_NATION_DOSSIERS/CLUSTER_A_SOVEREIGNTY/) |
+| **B: Litigation** | Clinical Safety | UK, USA, Ireland | [View Dossier](docs/01_NATION_DOSSIERS/CLUSTER_B_LITIGATION/) |
+| **C: Interoperability** | FHIR R5 / HI Service | Australia, Canada, NZ | [View Dossier](docs/01_NATION_DOSSIERS/CLUSTER_C_INTEROPERABILITY/) |
+| **D: Ethics** | AI Act / Privacy | EU, Switzerland, Singapore | [View Dossier](docs/01_NATION_DOSSIERS/CLUSTER_D_ETHICS_AI/) |
+
+## 🛠️ Technical Specs
+- **Logic:** Pydantic V2 Deterministic Schemas
+- **Standards:** HL7 FHIR R5, SNOMED CT
+- **Inference:** Local Ollama (Llama 3 / DeepSeek)
+- **Security:** SHA-256 Pseudonymization

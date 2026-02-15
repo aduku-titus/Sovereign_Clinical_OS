@@ -20,3 +20,5 @@ qdrant_storage/
 # OS files
 .DS_Store
 Thumbs.db
+vault_data/
+ollama_storage/
