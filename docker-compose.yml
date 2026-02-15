@@ -1,6 +1,4 @@
-﻿version: '3.8'
-
-services:
+﻿services:
   # PROJECT 2: THE SOVEREIGN CLOUD (Local LLM Engine)
   ollama-brain:
     image: ollama/ollama:latest
