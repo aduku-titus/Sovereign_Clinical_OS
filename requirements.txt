@@ -10,7 +10,8 @@ protobuf<5.0.0               # Pinned to prevent Streamlit conflicts
 
 # --- PROJECT 2: SOVEREIGN CLOUD & VAULT ---
 ollama==0.1.6
-fastembed==0.2.0             # The E5-Large Multilingual Brain
+fastembed>=0.2.0
+onnxruntime==1.19.0          # Pinned to a stable version to avoid hash drift
 qdrant-client==1.7.3         # The Vector Vault
 
 # --- PROJECT 3: LITIGATION SHIELD ---
