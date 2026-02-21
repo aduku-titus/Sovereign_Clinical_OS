@@ -9,6 +9,9 @@
       - sovereign_net
 
   # PROJECT 3 & 1: THE BRIDGE & LITIGATION SHIELD
+  # This runs the backend logic/API.
+  # Note: Since your Dockerfile runs Streamlit by default, this will run Streamlit invisibly.
+  # If you intended this to be just an API, you might need to override the 'command'.
   clinical-logic-api:
     build: .
     container_name: litigation_shield_api
@@ -30,9 +33,13 @@
 
   # PROJECT 4: ELDER-GUARD DASHBOARD (Streamlit UI)
   nurse-station:
-    image: python:3.10-slim
+    # --- CHANGE 1: USE BUILD, NOT IMAGE ---
+    # We must use the image we built with uv/torch, not a raw python image.
+    build: .
     container_name: clinician_ui
-    command: streamlit run app.py
+    # --- CHANGE 2: REMOVE COMMAND ---
+    # The Dockerfile ENTRYPOINT already handles "python -m streamlit run app.py"
+    # command: streamlit run app.py
     ports:
       - "8501:8501"
     volumes:

@@ -1,10 +1,3 @@
-# Compliance: South Korea PIPA
-**Focus:** Personal Information Protection Act (PIPA)
-
-## Alignment Overview
-South Korea has some of the world's strictest privacy laws. Our OS aligns with the **PIPA (2023 Amendment)**.
-
-## Key Statutory Alignments
-1. **Pseudonymization (Article 28-2):** The **SovereignScrubber** creates "Ghost IDs," allowing for the use of health data for R&D/PhD purposes without re-identification.
-2. **Offline Inference:** Directly satisfies Korean requirements for the protection of sensitive bio-information by ensuring zero cloud-sync.
-3. **Automated Auditing:** Logs every instance of data access by the **Agentic Swarm**.
+South Korea: PIPA (2023 Amendment)
+Article 28-2 (Pseudonymization): Permits data use for research without consent if pseudonymized.
+Implementation: The OS generates "Sovereign Ghost IDs." This allows clinical data to be utilized for secondary PhD/R&D analysis within the hospital without risking re-identification of Korean citizens.

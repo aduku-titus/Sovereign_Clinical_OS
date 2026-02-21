@@ -16,5 +16,23 @@
         "data_summary": "ID: ABC-123-GHOST | Triage: Category 2 (Emergency)",
         "previous_hash": "6e2150120ee1d4804b41fe2c1ab40bdcad2bf0ac191c90b9292eb48cb1bf8b55",
         "hash": "c861eee8c1cb75a893c81218a581a97357746308787d862f75977c7bbf27eaac"
+    },
+    {
+        "index": 2,
+        "timestamp": "2026-02-20 22:03:07.067828",
+        "action": "CLINICAL_SIGN_OFF",
+        "actor": "REGISTERED_NURSE_01",
+        "data_summary": "ID: ABC-123-GHOST | Triage: Category 2 (Emergency)",
+        "previous_hash": "c861eee8c1cb75a893c81218a581a97357746308787d862f75977c7bbf27eaac",
+        "hash": "b835990fecdf7e85330ecb6f8c613f333c1b84a61983ebc53466bd697f2dc910"
+    },
+    {
+        "index": 3,
+        "timestamp": "2026-02-21 09:24:00.407938",
+        "action": "CLINICAL_SIGN_OFF",
+        "actor": "REGISTERED_NURSE_01",
+        "data_summary": "ID: ABC-123-GHOST | Triage: Category 2 (Emergency)",
+        "previous_hash": "b835990fecdf7e85330ecb6f8c613f333c1b84a61983ebc53466bd697f2dc910",
+        "hash": "f0fe3c6765e69db369f4ed76c51be8015c5fd34992028aa873d86496742a060b"
     }
 ]

@@ -1,33 +1,34 @@
-# ==========================================
-# SOVEREIGN CLINICAL_OS: MASTER DEPENDENCIES
-# ==========================================
-
-# --- PROJECT 1: EDGE VISION (TATALE BRIDGE) ---
+# --- PROJECT 1: EDGE VISION ---
 easyocr==1.7.2
-opencv-python-headless<4.11  # 'Headless' is critical for server/tablet deployment
-numpy<2.0.0                  # Pinned to prevent Streamlit/EasyOCR conflicts
-protobuf<5.0.0               # Pinned to prevent Streamlit conflicts
+opencv-python-headless==4.10.0.84
+numpy==1.26.4
+# REMOVED: protobuf==4.25.8 (Conflict: langfuse needs v5, this pinned v4)
 
 # --- PROJECT 2: SOVEREIGN CLOUD & VAULT ---
 ollama==0.1.6
-fastembed>=0.2.0
-onnxruntime==1.19.0          # Pinned to a stable version to avoid hash drift
-qdrant-client==1.7.3         # The Vector Vault
+fastembed>=0.5.0
+onnxruntime>=1.19.0
+qdrant-client==1.7.3
 
 # --- PROJECT 3: LITIGATION SHIELD ---
-pydantic>=2.6.1              # Governance-as-Code
-fhir.resources==7.1.0        # Global Data Standards
-pytest>=8.0.0                # Clinical Safety Case Auditing
+pydantic==2.10.0
+fhir.resources==7.1.0
+pytest==8.3.3
 
-# --- PROJECT 4: AGENTIC SWARM (HITL) ---
-langgraph>=0.2.0             # Upgraded to support SQLite Memory
-langgraph-checkpoint-sqlite>=1.0.0 # Antifragile State Memory
-aiosqlite>=0.22.1            # Asynchronous local database
-langfuse>=3.13.0             # AI Telemetry & Observability
+# --- PROJECT 4: AGENTIC SWARM ---
+langgraph==0.2.66
+langgraph-checkpoint-sqlite==2.0.2
+langchain-core==0.3.35
+aiosqlite==0.20.0
+langfuse==3.13.0
 
-# --- INTEGRATED INFRASTRUCTURE & UI ---
-streamlit==1.31.0            # The Nurse's Station Dashboard
-python-dotenv==1.0.1         # Sovereign Secrets Manager (.env)
-fastapi==0.109.2             # API backend capability
+# --- SHARED INFRASTRUCTURE ---
+openai==1.63.2
+typing-extensions>=4.12.2
+annotated-types==0.7.0
+# UPGRADED: 1.31.0 restricted protobuf to <5.0. 1.32.0+ supports 5.0.
+streamlit>=1.32.0
+python-dotenv==1.0.1
+fastapi==0.109.2
 uvicorn==0.27.1
-pandas==2.3.3
+pandas==2.2.2

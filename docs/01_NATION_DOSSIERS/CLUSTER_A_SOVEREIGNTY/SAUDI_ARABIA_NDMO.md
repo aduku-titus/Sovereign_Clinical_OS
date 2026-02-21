@@ -1,11 +1,4 @@
-# Compliance: Saudi Arabia NDMO & PDPL
-**Focus:** National Data Management Office (NDMO) Standards
-
-## Alignment Overview
-This system aligns with the **Saudi Personal Data Protection Law (PDPL)** and the **NDMO Data Governance** framework for "Critical National Entities."
-
-## Key Statutory Alignments
-1. **Local Embeddings:** All vectorization (FastEmbed) occurs locally. This ensures that clinical knowledge bases used by the Vision Bridge do not leak to external hyperscalers.
-2. **Health Data Sensitivity:** The PDPL treats health data as "Sensitive." 
-   - *Implementation:* The **SovereignScrubber** hashes names into UUIDs before they enter the data lake, fulfilling "Privacy-by-Design" mandates.
-3. **Offline Infrastructure:** Supports the KSA Vision 2030 goal of resilient digital healthcare by operating 100% without global cloud dependencies.
+Saudi Arabia: NDMO Framework & PDPL
+Statutory Alignment: Aligns with the National Data Management Office (NDMO) standards for "Critical National Entities."
+Implementation: SovereignScrubber performs SHA-256 hashing of sensitive identifiers at the edge before data enters the local RAG pipeline, satisfying the PDPL mandate for "Privacy-by-Design."
+Vision 2030: Supports the Health Sector Transformation Program by providing clinical AI that remains operational during global sub-sea cable outages.

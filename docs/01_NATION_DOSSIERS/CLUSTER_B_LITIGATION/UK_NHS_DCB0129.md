@@ -1,10 +1,4 @@
-# Compliance: UK NHS DCB0129
-**Focus:** Clinical Risk Management for Health IT
-
-## Alignment Overview
-This OS implements the mandatory **DCB0129** standard required by the NHS for any manufacturer of health software.
-
-## Key Statutory Alignments
-1. **Clinical Safety Case (Project 3):** The **Litigation Shield** serves as the automated safety case. It cross-checks all outputs against **NICE Guidelines** and the **Merck Manual**.
-2. **Hazard Log Mitigation:** Every "Never Event" (e.g., lethal dose suggestion) is mitigated by the **ConflictResolver** class, which acts as a deterministic circuit breaker.
-3. **Data Protection:** Satisfies the **NHS Data Security and Protection Toolkit (DSPT)** requirements via the air-gapped Docker-compose deployment.
+ United Kingdom: NHS DCB0129
+Clinical Safety Case: Mandatory for any health IT system in the NHS.
+Architectural Response: Project 3 (Litigation Shield) acts as an automated Hazard Log. Every AI-generated triage suggestion is passed through a Deterministic Circuit Breaker (Pydantic V2) that cross-references NICE guidelines before the clinician sees the output.
+DSPT Compliance: Satisfies the Data Security and Protection Toolkit via a local-only loopback architecture.
