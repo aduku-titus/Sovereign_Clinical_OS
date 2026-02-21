@@ -1,7 +1,7 @@
 # 🏥 SOVEREIGN CLINICAL_OS
-[![Status](https://img.shields.io/badge/Status-Production%20Ready-green)]()
-[![Architecture](https://img.shields.io/badge/Architecture-Air--Gapped-blue)]()
-[![Compliance](https://img.shields.io/badge/Compliance-UAE%20Law%2045%20%7C%20NHS%20DCB0129-gold)]()
+![Status](https://img.shields.io/badge/Status-Production%20Ready-green)
+![Architecture](https://img.shields.io/badge/Architecture-Air--Gapped-blue)
+![Compliance](https://img.shields.io/badge/Compliance-UAE%20Law%2045%20%7C%20NHS%20DCB0129-gold)
 
 **Principal Architect:** Titus Afeo Azure Aduku  
 **Strategic Window:** 2026 Migration Cycle (UAE, Australia, Switzerland, UK)  
@@ -21,17 +21,17 @@ This is a unified clinical operating system built to bypass the "Public Cloud De
 ### 🏗️ 4 Pillars of Sovereignty
 | Pillar | Technology | Function |
 | :--- | :--- | :--- |
-| **1. Edge Vision Bridge** | `EasyOCR` + `OpenCV` | Offline digitization of legacy analog vitals. |
-| **2. Sovereign Vault** | `Qdrant` + `FastEmbed` | Local RAG and SHA-256 PII scrubbing (UAE Law 45 compliant). |
-| **3. Litigation Shield** | `Pydantic V2` | Deterministic clinical safety gates (NHS DCB0129 compliant). |
-| **4. Agentic Swarm** | `LangGraph` + `Ollama` | Local LLM triage and FHIR R5 discharge automation. |
+| **1. Edge Vision Bridge** | EasyOCR + OpenCV | Offline digitization of legacy analog vitals. |
+| **2. Sovereign Vault** | Qdrant + FastEmbed | Local RAG and SHA-256 PII scrubbing. |
+| **3. Litigation Shield** | Pydantic V2 | Deterministic clinical safety gates. |
+| **4. Agentic Swarm** | LangGraph + Ollama | Local LLM triage and FHIR R5 automation. |
 
 ---
 
 ## 🏛️ 12-Nation Regulatory Readiness
 This OS is architected to satisfy the specific legal frameworks of the 2026 migration targets:
 
-| Cluster | Focus | Target Nations | Dossier |
+| Cluster | Focus | Target Nations | Dossier Link |
 | :--- | :--- | :--- | :--- |
 | **A: Sovereignty** | Data Residency | UAE, Saudi Arabia, S. Korea | [View Dossier](docs/01_NATION_DOSSIERS/CLUSTER_A_SOVEREIGNTY/) |
 | **B: Litigation** | Clinical Safety | UK, USA, Ireland | [View Dossier](docs/01_NATION_DOSSIERS/CLUSTER_B_LITIGATION/) |
@@ -59,15 +59,14 @@ graph TD
 
 🚀 Quick Start (Airplane Mode)
 Prerequisites:
+
 Docker Desktop installed.
-Hardware: Minimum 12GB RAM (16GB recommended for Llama-3 inference).
+Hardware: Minimum 12GB RAM (16GB recommended).
 
 1. Build the Factory
 docker-compose up --build -d
-
 2. Pull the Brain (Requires internet once)
 docker exec -it clinical_brain_offline ollama pull llama3
-
 3. Go Offline
 Disconnect WiFi and navigate to http://localhost:8501
 
